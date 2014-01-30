@@ -1,0 +1,14 @@
+<h3>All Users:</h3>
+<ul>
+    <li ng-repeat="user in users">Name: {{ user.firstName }} {{ user.lastName}}, Department: {{ user.department }}</li>
+</ul>
+<form ng-submit="add(user)">
+    <input type="text" ng-model="user.firstName" placeholder="First Name" />
+    <input type="text" ng-model="user.lastName" placeholder="Last Name" />
+    <select ng-model="user.department">
+        <option>Accounting</option>
+        <option>Marketing</option>
+        <option>Sales</option>
+    </select>
+    <input type="submit" value="Add New User" />
+</form>
